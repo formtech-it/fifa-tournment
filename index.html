@@ -1,105 +1,374 @@
+```html
 <!DOCTYPE html>
 <html lang="it">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>FIFA 26 • Torneo Cervinara</title>
+<meta name="description" content="Torneo FIFA 26 Cervinara - Iscrizioni, regolamento, premi e informazioni.">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo+Black&family=Barlow+Condensed:wght@400;500;600;700;800;900&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Anton&family=Archivo+Black&family=Barlow+Condensed:wght@500;600;700;800&family=Rajdhani:wght@500;600;700&display=swap');
 :root{--pitch-dark:#05130b;--pitch-deep:#071f12;--lime:#c8ff3d;--cyan:#23f0ff;--pink:#ff2f8f;--gold:#ffcc33;--red:#ff3b3b;--white:#f4fff0;--muted:rgba(244,255,240,.68)}
-*{box-sizing:border-box}html,body{margin:0;padding:0;min-height:100%}body{min-height:100vh;color:var(--white);font-family:'Rajdhani',sans-serif;background:radial-gradient(circle at 50% -10%,rgba(35,240,255,.16),transparent 35%),radial-gradient(circle at 100% 100%,rgba(255,47,143,.13),transparent 40%),linear-gradient(180deg,var(--pitch-dark),var(--pitch-deep) 55%,#030b06)}.main-container{width:min(920px,92%);margin:auto;padding:42px 0 60px}.tag{display:inline-block;padding:7px 15px;border-radius:4px;background:var(--lime);color:var(--pitch-dark);font-family:'Barlow Condensed',sans-serif;font-weight:800;letter-spacing:3px;text-transform:uppercase}.tag.alt{background:transparent;color:var(--cyan);border:1px solid var(--cyan)}.hero{text-align:center;padding:45px 0 30px}.hero-pre{color:var(--cyan);font-family:'Barlow Condensed',sans-serif;font-weight:800;letter-spacing:8px;text-transform:uppercase}.hero h1{font-family:'Anton',sans-serif;font-size:clamp(100px,19vw,190px);line-height:.82;letter-spacing:2px}.hero h1 span{color:var(--lime)}.hero h2{margin-top:12px;font-family:'Archivo Black',sans-serif;font-size:clamp(25px,5vw,43px);letter-spacing:8px}.hero h2 span{color:var(--pink)}.registration-status{display:inline-flex;align-items:center;gap:10px;padding:10px 18px;margin-top:20px;border-radius:6px;font-family:'Barlow Condensed',sans-serif;font-size:18px;font-weight:800;letter-spacing:2px;text-transform:uppercase}.registration-open{color:var(--pitch-dark);background:var(--lime)}.registration-closed{color:#fff;background:var(--red);box-shadow:0 0 20px rgba(255,59,59,.35)}.status-dot{width:9px;height:9px;border-radius:50%;background:currentColor}.info-card{height:100%;padding:20px;text-align:center;background:rgba(244,255,240,.045);border:1px solid rgba(244,255,240,.16)}.label{color:var(--lime);font-family:'Barlow Condensed',sans-serif;font-weight:800;letter-spacing:2px;text-transform:uppercase}.value{margin-top:6px;font-family:'Archivo Black',sans-serif;font-size:28px}.value.gold{color:var(--gold)}.participants{margin-top:24px;padding:30px;border:1px solid rgba(200,255,61,.35);border-radius:14px;background:linear-gradient(120deg,rgba(200,255,61,.10),rgba(35,240,255,.025))}.participants h3,.section h3{margin:0;font-family:'Archivo Black',sans-serif;text-transform:uppercase;letter-spacing:1px}.counter{font-family:'Anton',sans-serif;font-size:64px;line-height:.9;color:var(--lime)}.counter small{font-family:'Barlow Condensed',sans-serif;font-size:20px;color:var(--muted)}.custom-progress{height:12px;margin-top:20px;background:rgba(255,255,255,.09);border-radius:99px;overflow:hidden}.custom-progress .progress-bar{background:linear-gradient(90deg,var(--lime),var(--cyan));border-radius:99px;transition:width .5s ease}.note{margin-top:10px;color:var(--muted);font-size:16px}.countdown-section{margin-top:22px;padding:30px;border:1px solid rgba(35,240,255,.35);border-radius:14px;background:radial-gradient(circle at 50% 0%,rgba(35,240,255,.08),transparent 60%)}.countdown-title{color:var(--cyan);font-family:'Archivo Black',sans-serif;font-size:25px;text-transform:uppercase;letter-spacing:1px}.countdown-subtitle{color:var(--muted);font-size:17px}.countdown-box{padding:18px 10px;background:rgba(0,0,0,.25);border:1px solid rgba(244,255,240,.12);border-radius:10px}.countdown-number{font-family:'Anton',sans-serif;font-size:clamp(42px,8vw,68px);line-height:.9;color:var(--lime)}.countdown-label{margin-top:8px;color:var(--muted);font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:15px;letter-spacing:2px;text-transform:uppercase}.section{margin-top:22px;padding:26px;border:1px solid rgba(244,255,240,.14);border-radius:14px;background:rgba(0,0,0,.18)}.section h3{margin-bottom:12px;color:var(--cyan);font-size:25px}.section p,.section li{color:var(--muted);font-size:18px;line-height:1.45}.placeholder{padding:18px;text-align:center;color:var(--muted);border:1px dashed rgba(244,255,240,.25);border-radius:8px}.result-card{position:relative;margin-top:22px;padding:30px;border:1px solid rgba(255,204,51,.35);border-radius:14px;background:linear-gradient(120deg,rgba(255,204,51,.10),rgba(255,47,143,.04))}.result-title{color:var(--gold);font-family:'Archivo Black',sans-serif;font-size:25px;text-transform:uppercase}.winner{padding:20px;text-align:center;border:1px solid rgba(255,204,51,.25);border-radius:10px;background:rgba(0,0,0,.2)}.winner-position{color:var(--gold);font-family:'Barlow Condensed',sans-serif;font-size:17px;font-weight:800;letter-spacing:3px;text-transform:uppercase}.winner-name{margin-top:5px;font-family:'Archivo Black',sans-serif;font-size:27px}.footer{margin-top:34px;color:var(--muted);font-size:14px;text-align:center}@media(max-width:650px){.main-container{padding-top:24px}.hero{padding-top:35px}.hero h2{letter-spacing:4px}.participants{padding:22px}.counter{font-size:52px}.countdown-section,.section,.result-card{padding:22px}}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:radial-gradient(circle at 50% 0%,#123b20 0,#071f12 35%,#05130b 75%);color:var(--white);font-family:"Barlow Condensed",sans-serif;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.08;background-image:linear-gradient(rgba(255,255,255,.15) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.15) 1px,transparent 1px);background-size:45px 45px}
+a{text-decoration:none}
+.topbar{padding:15px 0;border-bottom:1px solid rgba(200,255,61,.15);background:rgba(5,19,11,.85);backdrop-filter:blur(10px)}
+.tag{display:inline-flex;align-items:center;padding:6px 12px;border:1px solid rgba(200,255,61,.4);border-radius:999px;color:var(--lime);font-family:"Rajdhani",sans-serif;font-weight:800;font-size:.8rem;letter-spacing:1px;margin:3px}
+.hero{padding:75px 0 55px;position:relative}
+.hero:after{content:"FIFA 26";position:absolute;right:-5%;top:15%;font-family:"Archivo Black",sans-serif;font-size:clamp(5rem,18vw,15rem);line-height:1;color:rgba(200,255,61,.025);transform:rotate(-8deg);pointer-events:none}
+.kicker{font-family:"Rajdhani",sans-serif;font-weight:900;letter-spacing:4px;color:var(--cyan);font-size:1rem}
+.hero h1{font-family:"Anton",sans-serif;font-size:clamp(4rem,12vw,9rem);line-height:.85;letter-spacing:2px;margin:12px 0;color:var(--white);text-shadow:0 0 25px rgba(200,255,61,.15)}
+.hero h1 span{color:var(--lime)}
+.hero-subtitle{font-family:"Archivo Black",sans-serif;font-size:clamp(1rem,2.5vw,1.5rem);letter-spacing:1px}
+.hero-text{max-width:650px;color:var(--muted);font-size:1.2rem}
+.section{padding:70px 0}
+.date-card,.stat-card,.countdown-card,.info-card,.regulation-card,.prize-card,.result-card{background:linear-gradient(145deg,rgba(7,31,18,.96),rgba(5,19,11,.98));border:1px solid rgba(200,255,61,.18);border-radius:20px;box-shadow:0 15px 45px rgba(0,0,0,.22)}
+.date-card{padding:25px;text-align:center;height:100%}
+.date-number{font-family:"Anton",sans-serif;font-size:3.5rem;line-height:1;color:var(--lime)}
+.date-month{font-family:"Rajdhani",sans-serif;font-weight:900;letter-spacing:3px;color:var(--cyan)}
+.date-year{color:var(--muted);font-size:.9rem}
+.stat-card{padding:25px;height:100%}
+.stat-label{font-family:"Rajdhani",sans-serif;font-weight:900;letter-spacing:2px;color:var(--muted)}
+.stat-number{font-family:"Anton",sans-serif;font-size:3.5rem;line-height:1;color:var(--lime)}
+.progress{height:12px;background:rgba(255,255,255,.08);border-radius:20px;overflow:hidden}
+.progress-bar{background:linear-gradient(90deg,var(--lime),var(--cyan));box-shadow:0 0 15px rgba(200,255,61,.4)}
+.status{display:inline-block;padding:8px 16px;border-radius:999px;font-family:"Rajdhani",sans-serif;font-weight:900;letter-spacing:1px}
+.status-open{background:rgba(200,255,61,.12);border:1px solid var(--lime);color:var(--lime)}
+.status-closed{background:rgba(255,59,59,.12);border:1px solid var(--red);color:#ff6d6d}
+.countdown-card{padding:35px}
+.countdown-title{font-family:"Anton",sans-serif;font-size:2rem;letter-spacing:1px}
+.countdown-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:15px;margin-top:25px}
+.countdown-box{padding:20px 10px;background:rgba(255,255,255,.035);border:1px solid rgba(35,240,255,.2);border-radius:15px;text-align:center}
+.countdown-number{font-family:"Anton",sans-serif;font-size:3rem;line-height:1;color:var(--cyan)}
+.countdown-label{font-family:"Rajdhani",sans-serif;font-weight:900;color:var(--muted);letter-spacing:2px;font-size:.8rem}
+.section-heading{margin-bottom:40px}
+.section-kicker{font-family:"Rajdhani",sans-serif;font-weight:900;letter-spacing:3px;color:var(--cyan)}
+.section-heading h2{font-family:"Anton",sans-serif;font-size:clamp(2.2rem,5vw,4rem);letter-spacing:1px;margin:5px 0 10px}
+.section-heading p{color:var(--muted);font-size:1.1rem}
+.info-section{padding:80px 0;background:linear-gradient(180deg,rgba(35,240,255,.025),rgba(200,255,61,.025))}
+.info-card{padding:30px;height:100%;transition:.25s ease}
+.info-card:hover{transform:translateY(-5px);border-color:var(--lime);box-shadow:0 20px 45px rgba(200,255,61,.1)}
+.info-icon{font-size:3rem;margin-bottom:15px}
+.info-card h3{font-family:"Anton",sans-serif;font-size:1.8rem;letter-spacing:1px}
+.info-card p{color:var(--muted);font-size:1.05rem}
+.qr-box{width:190px;height:190px;background:#fff;padding:10px;margin:20px auto;border-radius:12px;display:flex;align-items:center;justify-content:center}
+.qr-box img,.qr-box canvas{max-width:100%;max-height:100%}
+.btn-neon,.btn-whatsapp,.btn-location{border:0;border-radius:10px;padding:12px 18px;font-family:"Rajdhani",sans-serif;font-weight:900;letter-spacing:1px;transition:.2s ease}
+.btn-neon{background:var(--lime);color:#05130b}
+.btn-whatsapp{background:#25d366;color:#fff}
+.btn-location{background:var(--cyan);color:#05130b}
+.btn-neon:hover,.btn-whatsapp:hover,.btn-location:hover{transform:translateY(-2px);filter:brightness(1.1)}
+.regulation-section{padding:80px 0}
+.regulation-card{padding:35px}
+.regulation-card h3{font-family:"Anton",sans-serif;font-size:2rem;color:var(--lime)}
+.regulation-card ul{padding-left:22px;color:var(--muted);font-size:1.1rem}
+.regulation-card li{margin-bottom:10px}
+.prize-card{padding:35px;text-align:center;height:100%}
+.prize-value{font-family:"Anton",sans-serif;font-size:4rem;color:var(--gold);line-height:1}
+.prize-label{font-family:"Rajdhani",sans-serif;font-weight:900;letter-spacing:2px;color:var(--muted)}
+.winner{padding:25px;text-align:center;border:1px solid rgba(255,255,255,.1);border-radius:16px;background:rgba(255,255,255,.025)}
+.winner-position{font-family:"Rajdhani",sans-serif;font-weight:900;letter-spacing:1px}
+.winner-name{font-family:"Anton",sans-serif;font-size:1.7rem;margin-top:8px}
+.result-title{font-family:"Anton",sans-serif;font-size:2.5rem;color:var(--gold)}
+footer{padding:35px 0;border-top:1px solid rgba(200,255,61,.12);color:var(--muted)}
+@media(max-width:767px){.hero{padding:55px 0 40px}.countdown-grid{grid-template-columns:repeat(2,1fr)}.countdown-number{font-size:2.4rem}.hero h1{font-size:4.5rem}.section{padding:55px 0}}
 </style>
 </head>
 <body>
-<main class="main-container">
-<header class="d-flex justify-content-between align-items-center gap-2 flex-wrap">
-<span class="tag">Torneo Ufficiale</span>
-<span class="tag alt">1v1 • SOLO PS5</span>
+<header class="topbar">
+<div class="container">
+<div class="d-flex flex-wrap justify-content-center">
+<span class="tag">⚽ FIFA 26</span>
+<span class="tag">🎮 TORNEO</span>
+<span class="tag">📍 CERVINARA</span>
+<span class="tag">🏆 COMPETIZIONE</span>
+</div>
+</div>
 </header>
+
+<main>
 <section class="hero">
-<div class="hero-pre">Iscrizioni Aperte</div>
-<h1>FIFA<span>26</span></h1>
-<h2>TORNEO <span>•</span> CERVINARA</h2>
-<div id="statusIscrizioni"></div>
-</section>
-<section class="row g-1">
-<div class="col-12 col-md-4"><div class="info-card"><div class="label">Inizio</div><div class="value gold">16 OTT</div></div></div>
-<div class="col-12 col-md-4"><div class="info-card"><div class="label">Fine</div><div class="value gold">18 OTT</div></div></div>
-<div class="col-12 col-md-4"><div class="info-card"><div class="label">Anno</div><div class="value">2026</div></div></div>
-</section>
-<section class="participants">
-<div class="d-flex justify-content-between align-items-end gap-3 flex-wrap">
-<div><div class="label">Partecipanti iscritti</div><h3>Posti disponibili</h3></div>
-<div class="counter"><span id="iscritti">24</span><small>/ <span id="massimo">32</span></small></div>
+<div class="container position-relative">
+<div class="kicker">TORNEO UFFICIALE</div>
+<h1>FIFA <span>26</span></h1>
+<div class="hero-subtitle">TORNEO CERVINARA</div>
+<p class="hero-text mt-3">Preparati a scendere in campo. Sfida gli avversari, conquista il podio e porta a casa la vittoria.</p>
+<div class="d-flex flex-wrap gap-2 mt-4">
+<a href="#iscrizione" class="btn btn-neon">📲 ISCRIVITI</a>
+<a href="#regolamento" class="btn btn-location">📜 REGOLAMENTO</a>
 </div>
-<div class="progress custom-progress" role="progressbar" aria-valuemin="0" aria-valuemax="32"><div id="barra" class="progress-bar" style="width:0%"></div></div>
-<div id="posti" class="note"></div>
-</section>
-<section id="countdownSection" class="countdown-section">
-<div class="text-center">
-<div class="countdown-title">⏱ Chiusura iscrizioni</div>
-<div class="countdown-subtitle mt-2">Le iscrizioni chiuderanno il <strong>15 Ottobre 2026</strong></div>
-</div>
-<div class="row g-2 mt-4">
-<div class="col-6 col-md-3"><div class="countdown-box text-center"><div id="giorni" class="countdown-number">00</div><div class="countdown-label">Giorni</div></div></div>
-<div class="col-6 col-md-3"><div class="countdown-box text-center"><div id="ore" class="countdown-number">00</div><div class="countdown-label">Ore</div></div></div>
-<div class="col-6 col-md-3"><div class="countdown-box text-center"><div id="minuti" class="countdown-number">00</div><div class="countdown-label">Minuti</div></div></div>
-<div class="col-6 col-md-3"><div class="countdown-box text-center"><div id="secondi" class="countdown-number">00</div><div class="countdown-label">Secondi</div></div></div>
 </div>
 </section>
-<section class="section">
-<h3>📋 Regolamento</h3>
-<div class="placeholder">Il regolamento sarà pubblicato qui prossimamente.</div>
+
+<section class="section pt-3">
+<div class="container">
+<div class="row g-3">
+<div class="col-12 col-md-4">
+<div class="date-card">
+<div class="date-number">16</div>
+<div class="date-month">OTT</div>
+<div class="date-year">2026</div>
+</div>
+</div>
+<div class="col-12 col-md-4">
+<div class="date-card">
+<div class="date-number">18</div>
+<div class="date-month">OTT</div>
+<div class="date-year">2026</div>
+</div>
+</div>
+<div class="col-12 col-md-4">
+<div class="date-card">
+<div class="date-number">2026</div>
+<div class="date-month">OTTOBRE</div>
+<div class="date-year">TORNEO FIFA 26</div>
+</div>
+</div>
+</div>
+</div>
 </section>
-<section class="section">
-<h3>📍 Dove si gioca</h3>
-<p class="mb-0">Cervinara</p>
+
+<section class="section pt-3">
+<div class="container">
+<div class="row g-4">
+<div class="col-12 col-lg-6">
+<div class="stat-card">
+<div class="stat-label">PARTECIPANTI</div>
+<div class="stat-number"><span id="iscrittiDisplay">0</span>/<span id="massimoDisplay">0</span></div>
+<div class="progress mt-3">
+<div id="progressBar" class="progress-bar" role="progressbar"></div>
+</div>
+<div class="mt-3"><span id="statoIscrizioni" class="status"></span></div>
+</div>
+</div>
+<div class="col-12 col-lg-6">
+<div class="countdown-card h-100">
+<div class="countdown-title">⏳ CHIUSURA ISCRIZIONI</div>
+<div id="countdown">
+<div class="countdown-grid">
+<div class="countdown-box"><div id="giorni" class="countdown-number">00</div><div class="countdown-label">GIORNI</div></div>
+<div class="countdown-box"><div id="ore" class="countdown-number">00</div><div class="countdown-label">ORE</div></div>
+<div class="countdown-box"><div id="minuti" class="countdown-number">00</div><div class="countdown-label">MINUTI</div></div>
+<div class="countdown-box"><div id="secondi" class="countdown-number">00</div><div class="countdown-label">SECONDI</div></div>
+</div>
+</div>
+<div id="countdownClosed" class="text-center mt-4" style="display:none;font-family:'Anton',sans-serif;font-size:2rem;color:var(--red)">🔒 ISCRIZIONI CHIUSE</div>
+</div>
+</div>
+</div>
+</div>
 </section>
-<section class="section">
-<h3>🏆 Montepremi</h3>
-<p class="mb-0">Premi cash per i primi classificati. L'ammontare esatto sarà comunicato in base al numero di iscritti.</p>
+
+<section id="iscrizione" class="info-section">
+<div class="container">
+<div class="section-heading text-center">
+<div class="section-kicker">INFO TORNEO</div>
+<h2>REGOLAMENTO & ISCRIZIONE</h2>
+<p>Tutto quello che ti serve per partecipare al Torneo FIFA 26 Cervinara.</p>
+</div>
+<div class="row g-4">
+<div class="col-12 col-lg-4">
+<div class="info-card">
+<div class="info-icon">📜</div>
+<h3>REGOLAMENTO</h3>
+<p>Consulta tutte le regole, le modalità di gioco e le condizioni del torneo.</p>
+<a href="#regolamento" class="btn btn-neon w-100">LEGGI IL REGOLAMENTO</a>
+</div>
+</div>
+<div class="col-12 col-lg-4">
+<div class="info-card text-center">
+<div class="info-icon">📲</div>
+<h3>ISCRIVITI</h3>
+<p>Inquadra il QR Code oppure contattaci direttamente su WhatsApp.</p>
+<div id="qrcode" class="qr-box"></div>
+<a id="whatsappLink" href="#" target="_blank" rel="noopener" class="btn btn-whatsapp w-100">ISCRIVITI SU WHATSAPP</a>
+</div>
+</div>
+<div class="col-12 col-lg-4">
+<div class="info-card">
+<div class="info-icon">📍</div>
+<h3>DOVE SI SVOLGE</h3>
+<p id="posizioneNome">Sede del torneo</p>
+<a id="posizioneLink" href="#" target="_blank" rel="noopener" class="btn btn-location w-100">VEDI LA LOCATION</a>
+</div>
+</div>
+</div>
+</div>
 </section>
-<section id="esitoTorneo" class="result-card" style="display:none">
-<div class="result-title text-center">🏆 Esito del torneo</div>
+
+<section id="regolamento" class="regulation-section">
+<div class="container">
+<div class="section-heading text-center">
+<div class="section-kicker">REGOLE UFFICIALI</div>
+<h2>REGOLAMENTO</h2>
+<p>Le regole da conoscere prima di scendere in campo.</p>
+</div>
+<div class="regulation-card">
+<div class="row g-4">
+<div class="col-12 col-lg-6">
+<h3>🎮 Modalità di gioco</h3>
+<ul>
+<li>Il torneo si disputa su EA SPORTS FC 26.</li>
+<li>Le modalità e le impostazioni di gioco saranno comunicate dall'organizzazione.</li>
+<li>Ogni partecipante deve presentarsi in orario.</li>
+<li>Il calendario delle partite sarà definito dall'organizzazione.</li>
+</ul>
+</div>
+<div class="col-12 col-lg-6">
+<h3>🏆 Regole torneo</h3>
+<ul>
+<li>È obbligatorio rispettare avversari e organizzatori.</li>
+<li>Comportamenti antisportivi possono comportare l'esclusione.</li>
+<li>Le decisioni dell'organizzazione sono definitive.</li>
+<li>In caso di problemi tecnici sarà l'organizzazione a stabilire la soluzione.</li>
+</ul>
+</div>
+<div class="col-12">
+<h3>⚠️ Importante</h3>
+<ul>
+<li>La partecipazione implica l'accettazione del presente regolamento.</li>
+<li>Eventuali modifiche saranno comunicate prima dell'inizio del torneo.</li>
+<li>Per qualsiasi dubbio è possibile contattare l'organizzazione tramite WhatsApp.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="container">
+<div class="section-heading text-center">
+<div class="section-kicker">PREMI</div>
+<h2>MONTEPREMI</h2>
+<p>Il podio si gioca fino all'ultimo match.</p>
+</div>
+<div class="row g-4">
+<div class="col-12 col-md-4">
+<div class="prize-card">
+<div class="winner-position">🥇 1° POSTO</div>
+<div id="premioPrimo" class="prize-value">€ 300</div>
+<div class="prize-label">PREMIO</div>
+</div>
+</div>
+<div class="col-12 col-md-4">
+<div class="prize-card">
+<div class="winner-position">🥈 2° POSTO</div>
+<div id="premioSecondo" class="prize-value">€ 150</div>
+<div class="prize-label">PREMIO</div>
+</div>
+</div>
+<div class="col-12 col-md-4">
+<div class="prize-card">
+<div class="winner-position">🥉 3° POSTO</div>
+<div id="premioTerzo" class="prize-value">€ 50</div>
+<div class="prize-label">PREMIO</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="esitoTorneo" class="section result-card" style="display:none">
+<div class="container">
+<div class="result-title text-center">🏆 ESITO DEL TORNEO</div>
 <p class="text-center mt-2 mb-4">Classifica finale del Torneo FIFA 26 Cervinara.</p>
 <div class="row g-3">
-<div class="col-12 col-md-4"><div class="winner"><div class="winner-position">🥇 1° Posto</div><div id="primoPosto" class="winner-name">Da definire</div></div></div>
-<div class="col-12 col-md-4"><div class="winner"><div class="winner-position">🥈 2° Posto</div><div id="secondoPosto" class="winner-name">Da definire</div></div></div>
-<div class="col-12 col-md-4"><div class="winner"><div class="winner-position">🥉 3° Posto</div><div id="terzoPosto" class="winner-name">Da definire</div></div></div>
+<div class="col-12 col-md-4"><div class="winner"><div class="winner-position">🥇 1° POSTO</div><div id="primoPosto" class="winner-name">Da definire</div></div></div>
+<div class="col-12 col-md-4"><div class="winner"><div class="winner-position">🥈 2° POSTO</div><div id="secondoPosto" class="winner-name">Da definire</div></div></div>
+<div class="col-12 col-md-4"><div class="winner"><div class="winner-position">🥉 3° POSTO</div><div id="terzoPosto" class="winner-name">Da definire</div></div></div>
+</div>
 </div>
 </section>
-<footer class="footer">Torneo FIFA 26 • Cervinara • 16–18 Ottobre 2026</footer>
 </main>
+
+<footer>
+<div class="container text-center">
+<div>FIFA 26 • TORNEO CERVINARA</div>
+<div class="mt-1">© 2026 • Tutti i diritti riservati</div>
+</div>
+</footer>
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
 <script>
-const iscritti=24;
-const massimo=32;
-const iscrizioniChiuse=false;
-const mostraEsito=false;
-const primoPosto="Da definire";
-const secondoPosto="Da definire";
-const terzoPosto="Da definire";
-document.getElementById("iscritti").textContent=iscritti;
-document.getElementById("massimo").textContent=massimo;
-const iscrizioniSonoChiuse=iscrizioniChiuse||iscritti>=massimo;
-const statusElement=document.getElementById("statusIscrizioni");
-statusElement.innerHTML=iscrizioniSonoChiuse?'<div class="registration-status registration-closed"><span class="status-dot"></span>ISCRIZIONI CHIUSE</div>':'<div class="registration-status registration-open"><span class="status-dot"></span>ISCRIZIONI APERTE</div>';
-const percentuale=massimo>0?Math.min(100,(iscritti/massimo)*100):0;
-document.getElementById("barra").style.width=percentuale+"%";
-const disponibili=Math.max(0,massimo-iscritti);
-document.getElementById("posti").textContent=disponibili===0?"Torneo al completo!":`Ancora ${disponibili} ${disponibili===1?"posto disponibile":"posti disponibili"}.`;
-const dataChiusura=new Date("2026-10-15T23:59:59");
+const torneo={
+iscritti:24,
+massimo:32,
+iscrizioniChiuse:false,
+dataChiusura:"2026-10-15T23:59:59",
+mostraEsito:false,
+primoPosto:"Da definire",
+secondoPosto:"Da definire",
+terzoPosto:"Da definire",
+whatsappNumero:"393XXXXXXXXX",
+whatsappMessaggio:"Ciao, vorrei iscrivermi al Torneo FIFA 26 Cervinara.",
+posizioneNome:"Sede del Torneo FIFA 26 Cervinara",
+posizioneLink:"https://maps.google.com/?q=Cervinara",
+premioPrimo:"€ 300",
+premioSecondo:"€ 150",
+premioTerzo:"€ 50"
+};
+
+const iscrizioniSonoChiuse=torneo.iscrizioniChiuse||torneo.iscritti>=torneo.massimo;
+const percentuale=Math.min((torneo.iscritti/torneo.massimo)*100,100);
+
+document.getElementById("iscrittiDisplay").textContent=torneo.iscritti;
+document.getElementById("massimoDisplay").textContent=torneo.massimo;
+document.getElementById("progressBar").style.width=percentuale+"%";
+
+const stato=document.getElementById("statoIscrizioni");
+if(iscrizioniSonoChiuse){
+stato.textContent="🔒 ISCRIZIONI CHIUSE";
+stato.className="status status-closed";
+}else{
+stato.textContent="✓ ISCRIZIONI APERTE";
+stato.className="status status-open";
+}
+
+document.getElementById("premioPrimo").textContent=torneo.premioPrimo;
+document.getElementById("premioSecondo").textContent=torneo.premioSecondo;
+document.getElementById("premioTerzo").textContent=torneo.premioTerzo;
+
+document.getElementById("primoPosto").textContent=torneo.primoPosto;
+document.getElementById("secondoPosto").textContent=torneo.secondoPosto;
+document.getElementById("terzoPosto").textContent=torneo.terzoPosto;
+
+if(torneo.mostraEsito)document.getElementById("esitoTorneo").style.display="block";
+
+const whatsappUrl="https://wa.me/"+torneo.whatsappNumero+"?text="+encodeURIComponent(torneo.whatsappMessaggio);
+document.getElementById("whatsappLink").href=whatsappUrl;
+document.getElementById("posizioneNome").textContent=torneo.posizioneNome;
+document.getElementById("posizioneLink").href=torneo.posizioneLink;
+
+new QRCode(document.getElementById("qrcode"),{
+text:whatsappUrl,
+width:170,
+height:170,
+correctLevel:QRCode.CorrectLevel.H
+});
+
 function aggiornaCountdown(){
-const differenza=dataChiusura-new Date();
-if(differenza<=0||iscrizioniSonoChiuse){
-document.getElementById("countdownSection").innerHTML='<div class="text-center"><div class="countdown-title" style="color:var(--red)">🔒 Iscrizioni chiuse</div><div class="countdown-subtitle mt-2">Le iscrizioni al torneo sono terminate.</div></div>';
+if(iscrizioniSonoChiuse){
+document.getElementById("countdown").style.display="none";
+document.getElementById("countdownClosed").style.display="block";
 return;
 }
-const giorni=Math.floor(differenza/(1000*60*60*24));
-const ore=Math.floor((differenza/(1000*60*60))%24);
-const minuti=Math.floor((differenza/(1000*60))%60);
-const secondi=Math.floor((differenza/1000)%60);
+const ora=new Date().getTime();
+const chiusura=new Date(torneo.dataChiusura).getTime();
+const distanza=chiusura-ora;
+if(distanza<=0){
+document.getElementById("countdown").style.display="none";
+document.getElementById("countdownClosed").style.display="block";
+return;
+}
+const giorni=Math.floor(distanza/(1000*60*60*24));
+const ore=Math.floor((distanza%(1000*60*60*24))/(1000*60*60));
+const minuti=Math.floor((distanza%(1000*60*60))/(1000*60));
+const secondi=Math.floor((distanza%(1000*60))/1000);
 document.getElementById("giorni").textContent=String(giorni).padStart(2,"0");
 document.getElementById("ore").textContent=String(ore).padStart(2,"0");
 document.getElementById("minuti").textContent=String(minuti).padStart(2,"0");
@@ -107,13 +376,7 @@ document.getElementById("secondi").textContent=String(secondi).padStart(2,"0");
 }
 aggiornaCountdown();
 setInterval(aggiornaCountdown,1000);
-const sezioneEsito=document.getElementById("esitoTorneo");
-if(mostraEsito){
-sezioneEsito.style.display="block";
-document.getElementById("primoPosto").textContent=primoPosto;
-document.getElementById("secondoPosto").textContent=secondoPosto;
-document.getElementById("terzoPosto").textContent=terzoPosto;
-}
 </script>
 </body>
 </html>
+```
